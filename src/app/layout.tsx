@@ -20,19 +20,19 @@ export const metadata = {
   ],
   authors: [{ name: "Ogbekhilu Osaro" }],
   creator: "Ogbekhilu Osaro",
-  metadataBase: new URL("https://yourdomain.com"), // Replace with actual URL when live
+  metadataBase: new URL("https://jay-dev-portfolio.vercel.app/"),
   openGraph: {
     title: "Osaro | Full Stack Developer Portfolio",
     description:
       "Explore Osaro's portfolio featuring modern, responsive web apps built with cutting-edge web technologies.",
-    url: "https://yourdomain.com", // Replace with actual URL
+    url: "https://jay-dev-portfolio.vercel.app/",
     siteName: "Osaro Portfolio",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Osaro Portfolio Preview",
+        alt: " Portfolio Preview",
       },
     ],
     locale: "en_US",
