@@ -10,7 +10,7 @@ const projects = [
     description:
       "An internal web app for managing telecom fault logs, escalations, and Inter-department collaboration.",
     imageSrc: "/images/noc-fault-logger.png",
-    link: "",
+    link: "https://github.com/Jay963-sys/NOC-INCIDENT-TRACKER",
     techStack: ["Node", "ExpressJs", "React", "PostgreSQL"],
   },
   {
@@ -19,7 +19,7 @@ const projects = [
     description:
       "A sleek, responsive portfolio site built with Next.js, Tailwind, and Framer Motion.",
     imageSrc: "/images/portfolio-preview.png",
-    link: "#",
+    link: "https://jay-dev-portfolio.vercel.app/",
     techStack: ["Next.js", "Framer Motion", "Vercel"],
   },
   {
