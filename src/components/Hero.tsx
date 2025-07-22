@@ -24,7 +24,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-2xl"
         >
-          I’m a Software Engineer, I enjoy developing and building modern,
+          I am a Software Engineer, I enjoy developing and building modern,
           scalable, and user-focused digital solutions.
         </m.p>
 

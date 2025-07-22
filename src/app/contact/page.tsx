@@ -71,7 +71,7 @@ export default function ContactPage() {
           variants={itemVariants}
           className="text-gray-700 dark:text-gray-300 text-lg mb-8"
         >
-          I'd love to hear from you! Reach out via the form below or through
+          I would love to hear from you! Reach out via the form below or through
           social media.
         </m.p>
 

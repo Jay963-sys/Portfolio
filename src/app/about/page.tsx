@@ -8,7 +8,7 @@ const funFacts = [
   "🌍 Based in Lagos, Nigeria",
   "🎧 Love building while listening to Music",
   "📚 Constantly learning something new",
-  "⚽ When I'm not writing code I enjoy watching Liverpool F.C.",
+  "⚽ When I am not writing code I enjoy watching Liverpool F.C.",
 ];
 
 const containerVariants = {
@@ -77,14 +77,14 @@ export default function AboutPage() {
         </h1>
 
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg mt-2">
-          I'm a passionate software engineer with a focus on full-stack
+          I am a passionate software engineer with a focus on full-stack
           development. I build modern, responsive, and performant web apps using
           React, Next.js, TypeScript, and Node.js.
         </p>
 
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg mt-4">
           I love crafting clean, maintainable code and turning complex problems
-          into elegant solutions. Currently, I'm focused on scalable
+          into elegant solutions. Currently, I am focused on scalable
           applications, backend architecture, and open-source contributions.
         </p>
 
