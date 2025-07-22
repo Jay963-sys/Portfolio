@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m } from "framer-motion";
 import Image from "next/image";
 
 const funFacts = [
@@ -8,7 +8,7 @@ const funFacts = [
   "🌍 Based in Lagos, Nigeria",
   "🎧 Love building while listening to Music",
   "📚 Constantly learning something new",
-  "⚽ When I'm not writing code i enjoy watching the best club in the world Liverpool F.C",
+  "⚽ When I'm not writing code I enjoy watching Liverpool F.C.",
 ];
 
 const containerVariants = {
@@ -28,7 +28,7 @@ const itemVariants = {
 
 function FunFactsSection() {
   return (
-    <motion.div
+    <m.div
       variants={containerVariants}
       initial="hidden"
       whileInView="show"
@@ -40,23 +40,23 @@ function FunFactsSection() {
       </h2>
       <ul className="space-y-3">
         {funFacts.map((fact, idx) => (
-          <motion.li
+          <m.li
             key={idx}
             variants={itemVariants}
             className="text-gray-700 dark:text-gray-300 text-lg"
           >
             {fact}
-          </motion.li>
+          </m.li>
         ))}
       </ul>
-    </motion.div>
+    </m.div>
   );
 }
 
 export default function AboutPage() {
   return (
-    <>
-      <motion.div
+    <LazyMotion features={domAnimation}>
+      <m.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -64,9 +64,11 @@ export default function AboutPage() {
       >
         <Image
           src="/images/profile.jpeg"
-          alt="Profile"
+          alt="Profile picture of the developer"
           width={120}
           height={120}
+          priority
+          loading="eager"
           className="rounded-full mx-auto mb-6 border-4 border-blue-500"
         />
 
@@ -76,16 +78,14 @@ export default function AboutPage() {
 
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg mt-2">
           I'm a passionate software engineer with a focus on full-stack
-          developement. I have a strong background in building modern,
-          responsive, and performant web applications using technologies like
+          development. I build modern, responsive, and performant web apps using
           React, Next.js, TypeScript, and Node.js.
         </p>
 
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg mt-4">
           I love crafting clean, maintainable code and turning complex problems
-          into elegant solutions. Currently, I'm focused on building scalable
-          applications, learning backend architecture, and contributing to
-          open-source.
+          into elegant solutions. Currently, I'm focused on scalable
+          applications, backend architecture, and open-source contributions.
         </p>
 
         {/* Resume Download Button */}
@@ -93,6 +93,7 @@ export default function AboutPage() {
           href="/resume.pdf"
           download
           className="inline-block mt-6 px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition-colors"
+          aria-label="Download my resume"
         >
           Download Resume
         </a>
@@ -103,32 +104,32 @@ export default function AboutPage() {
             Timeline
           </h2>
           <div className="relative border-l-2 border-blue-500 pl-6 space-y-12">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4 }}
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="absolute -left-4 top-1.5 w-3 h-3 bg-blue-600 rounded-full shadow"></div>
+              <div className="absolute -left-4 top-1.5 w-3 h-3 bg-blue-600 rounded-full shadow" />
               <h3 className="text-lg font-semibold">Full-Stack Developer</h3>
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                FreeLance Contractor · 2023 – Present
+                Freelance Contractor · 2023 – Present
               </p>
               <p className="mt-1 text-gray-700 dark:text-gray-300">
                 Building accessible, responsive interfaces using Node,
-                ExpressJs, PostgreSQL, Flask, React and Tailwind CSS.
+                Express.js, PostgreSQL, Flask, React, and Tailwind CSS.
               </p>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="absolute -left-4 top-1.5 w-3 h-3 bg-blue-600 rounded-full shadow"></div>
+              <div className="absolute -left-4 top-1.5 w-3 h-3 bg-blue-600 rounded-full shadow" />
               <h3 className="text-lg font-semibold">
                 B.Sc. Systems Engineering
               </h3>
@@ -138,7 +139,7 @@ export default function AboutPage() {
               <p className="mt-1 text-gray-700 dark:text-gray-300">
                 Specialized in web development and software engineering.
               </p>
-            </motion.div>
+            </m.div>
           </div>
         </div>
 
@@ -155,10 +156,10 @@ export default function AboutPage() {
             )
           )}
         </div>
-      </motion.div>
+      </m.div>
 
-      {/*Fun Facts*/}
+      {/* Fun Facts Section */}
       <FunFactsSection />
-    </>
+    </LazyMotion>
   );
 }

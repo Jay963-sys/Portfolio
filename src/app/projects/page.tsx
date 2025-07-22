@@ -2,15 +2,16 @@
 
 import { motion } from "framer-motion";
 import ProjectCard from "@/components/ProjectCard";
+import Image from "next/image";
 
 const projects = [
   {
     id: 1,
-    title: "NOC Incident Manager",
+    title: "Incident Manager",
     description:
       "An internal web app for managing telecom fault logs, escalations, and Inter-department collaboration.",
     imageSrc: "/images/noc-fault-logger.png",
-    link: "https://github.com/Jay963-sys/NOC-INCIDENT-TRACKER",
+    link: "",
     techStack: ["Node", "ExpressJs", "React", "PostgreSQL"],
   },
   {
