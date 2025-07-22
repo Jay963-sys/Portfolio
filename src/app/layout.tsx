@@ -1,11 +1,8 @@
 import "./globals.css";
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
-
-
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata = {
   title: {
@@ -32,7 +29,7 @@ export const metadata = {
     siteName: "Osaro Portfolio",
     images: [
       {
-        url: "/og-image.png", 
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Osaro Portfolio Preview",
@@ -46,7 +43,7 @@ export const metadata = {
     title: "Osaro | Full Stack Developer Portfolio",
     description:
       "Modern, responsive web apps built with React, Next.js, and Tailwind CSS.",
-    creator: "@Jedediah_xo", 
+    creator: "@Jedediah_xo",
     images: ["/og-image.png"],
   },
 };

@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import ProjectCard from "@/components/ProjectCard";
-import Image from "next/image";
 
 const projects = [
   {
