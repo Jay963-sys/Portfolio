@@ -15,6 +15,22 @@ const projects = [
   },
   {
     id: 2,
+    title: "Videographer Portfolio Platform",
+    description:
+      "A full-stack video showcase platform built with performance, flexibility, and style. Designed for filmmakers, content creators, and videographers to easily upload, manage, and present their work online — securely and beautifully.",
+    imageSrc: "/images/bhoye.png",
+    link: "https://bhoyevisuals.vercel.app/",
+    techStack: [
+      "Next.js(App Router)",
+      "Typescript",
+      "Framer Motion",
+      "PostgreSQL(Neon)",
+      "Cloudinary",
+      "Clerk",
+    ],
+  },
+  {
+    id: 3,
     title: "Portfolio Site",
     description:
       "A sleek, responsive portfolio site built with Next.js, Tailwind, and Framer Motion.",
@@ -23,7 +39,7 @@ const projects = [
     techStack: ["Next.js", "Framer Motion", "Vercel"],
   },
   {
-    id: 3,
+    id: 4,
     title: "Weatherify",
     description:
       "A Simple Light-weight Weather web application that relies on simple API calls to fetch weather of different cities.",
@@ -32,7 +48,7 @@ const projects = [
     techStack: ["Python", "HTML + CSS", "Vercel"],
   },
   {
-    id: 4,
+    id: 5,
     title: "Tranzl8",
     description:
       "A Simple Light-weight Language translation web application that relies on simple API calls to translate between over 100+ languages.",
