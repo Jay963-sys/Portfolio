@@ -15,6 +15,21 @@ const projects = [
   },
   {
     id: 2,
+    title: "🎵Mood Play",
+    description:
+      "AI-powered Spotify playlist generator that automatically creates playlists based on User prompts or Questionnaire responses",
+    imageSrc: "/images/mood-play.png",
+    link: "https://mood-play.vercel.app/",
+    techStack: [
+      "Next.js(App Router)",
+      "Typescript",
+      "Framer Motion",
+      "NextAuth",
+      "Spotify API",
+    ],
+  },
+  {
+    id: 3,
     title: "Videographer Portfolio Platform",
     description:
       "A full-stack video showcase platform built with performance, flexibility, and style. Designed for filmmakers, content creators, and videographers to easily upload, manage, and present their work online — securely and beautifully.",
@@ -30,7 +45,7 @@ const projects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Portfolio Site",
     description:
       "A sleek, responsive portfolio site built with Next.js, Tailwind, and Framer Motion.",
@@ -39,7 +54,7 @@ const projects = [
     techStack: ["Next.js", "Framer Motion", "Vercel"],
   },
   {
-    id: 4,
+    id: 5,
     title: "Weatherify",
     description:
       "A Simple Light-weight Weather web application that relies on simple API calls to fetch weather of different cities.",
@@ -48,7 +63,7 @@ const projects = [
     techStack: ["Python", "HTML + CSS", "Vercel"],
   },
   {
-    id: 5,
+    id: 6,
     title: "Tranzl8",
     description:
       "A Simple Light-weight Language translation web application that relies on simple API calls to translate between over 100+ languages.",
