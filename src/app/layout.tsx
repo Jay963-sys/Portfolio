@@ -11,6 +11,12 @@ export const metadata = {
   },
   description:
     "Explore Osaro's portfolio featuring modern, responsive web apps built with Next.js, Tailwind CSS, and TypeScript.",
+  icons: {
+    icon: "/logo.jpg",
+    shortcut: "/logo.jpg",
+    apple: "/logo.jpg",
+  },
+
   keywords: [
     "Full Stack Developer",
     "Next.js Portfolio",
