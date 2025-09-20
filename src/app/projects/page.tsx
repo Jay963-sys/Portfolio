@@ -15,26 +15,11 @@ const projects = [
   },
   {
     id: 2,
-    title: "🎵Mood Play",
-    description:
-      "AI-powered Spotify playlist generator that automatically creates playlists based on User prompts or Questionnaire responses",
-    imageSrc: "/images/mood-play.png",
-    link: "https://mood-play.vercel.app/",
-    techStack: [
-      "Next.js(App Router)",
-      "Typescript",
-      "Framer Motion",
-      "NextAuth",
-      "Spotify API",
-    ],
-  },
-  {
-    id: 3,
     title: "Videographer Portfolio Platform",
     description:
       "A full-stack video showcase platform built with performance, flexibility, and style. Designed for filmmakers, content creators, and videographers to easily upload, manage, and present their work online — securely and beautifully.",
     imageSrc: "/images/bhoye.png",
-    link: "https://bhoyevisuals.vercel.app/",
+    link: "https://bhoyevisuals.com/",
     techStack: [
       "Next.js(App Router)",
       "Typescript",
@@ -43,6 +28,15 @@ const projects = [
       "Cloudinary",
       "Clerk",
     ],
+  },
+  {
+    id: 3,
+    title: "Ratel Networks",
+    description:
+      "Simple website for a tech startup that provides IT services to small and medium-sized businesses.",
+    imageSrc: "/images/ratel.png",
+    link: "https://www.ratelnetworks.com.ng/",
+    techStack: ["Next.js(App Router)", "Typescript", "Framer Motion"],
   },
   {
     id: 4,
@@ -64,6 +58,21 @@ const projects = [
   },
   {
     id: 6,
+    title: "🎵Mood Play",
+    description:
+      "AI-powered Spotify playlist generator that automatically creates playlists based on User prompts or Questionnaire responses",
+    imageSrc: "/images/mood-play.png",
+    link: "https://mood-play.vercel.app/",
+    techStack: [
+      "Next.js(App Router)",
+      "Typescript",
+      "Framer Motion",
+      "NextAuth",
+      "Spotify API",
+    ],
+  },
+  {
+    id: 7,
     title: "Tranzl8",
     description:
       "A Simple Light-weight Language translation web application that relies on simple API calls to translate between over 100+ languages.",
