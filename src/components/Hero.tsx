@@ -15,7 +15,7 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-6xl font-extrabold mb-4 text-gray-900 dark:text-white"
         >
-          Hi, I&#39;m Osaro 👋
+          Hi, I&#39;m Jay 👋
         </m.h1>
 
         <m.p

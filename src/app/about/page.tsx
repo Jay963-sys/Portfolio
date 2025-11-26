@@ -5,7 +5,6 @@ import Image from "next/image";
 
 const funFacts = [
   "💻 I write code every single day",
-  "🌍 Based in Lagos, Nigeria",
   "🎧 Love building while listening to Music",
   "📚 Constantly learning something new",
   "⚽ When I am not writing code I enjoy watching Liverpool F.C.",
@@ -133,9 +132,7 @@ export default function AboutPage() {
               <h3 className="text-lg font-semibold">
                 B.Sc. Systems Engineering
               </h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                University of Lagos · 2020 – 2026
-              </p>
+
               <p className="mt-1 text-gray-700 dark:text-gray-300">
                 Specialized in web development and software engineering.
               </p>

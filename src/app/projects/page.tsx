@@ -31,11 +31,11 @@ const projects = [
   },
   {
     id: 3,
-    title: "Ratel Networks",
+    title: "Toye Studios",
     description:
-      "Simple website for a tech startup that provides IT services to small and medium-sized businesses.",
-    imageSrc: "/images/ratel.png",
-    link: "https://www.ratelnetworks.com.ng/",
+      "Simple portfolio web-app for a creative studio to showcase their work.",
+    imageSrc: "/images/toye.png",
+    link: "https://toye-studios.vercel.app/",
     techStack: ["Next.js(App Router)", "Typescript", "Framer Motion"],
   },
   {
@@ -43,7 +43,7 @@ const projects = [
     title: "Portfolio Site",
     description:
       "A sleek, responsive portfolio site built with Next.js, Tailwind, and Framer Motion.",
-    imageSrc: "/images/portfolio-preview.png",
+    imageSrc: "/images/jay.png",
     link: "https://jay-dev-portfolio.vercel.app/",
     techStack: ["Next.js", "Framer Motion", "Vercel"],
   },
@@ -91,7 +91,7 @@ export default function ProjectsPage() {
       className="max-w-6xl mx-auto px-4 py-20"
     >
       <h1 className="text-4xl font-bold mb-12 text-center text-blue-600 dark:text-blue-400">
-        My Projects
+        A Few of My Projects
       </h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
