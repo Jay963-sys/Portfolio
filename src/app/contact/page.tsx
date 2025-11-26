@@ -3,7 +3,8 @@
 import { useRef, useState } from "react";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaTwitter } from "react-icons/fa";
+import { MailIcon } from "lucide-react";
 
 const containerVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -168,23 +169,15 @@ export default function ContactPage() {
           >
             <FaGithub />
           </a>
+
           <a
-            href="https://linkedin.com/in/ogbekhilu-osaro"
+            href="mailto:ogbekhilu.osaro@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="LinkedIn"
+            aria-label="Email"
             className="hover:text-blue-800 transition"
           >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://x.com/jedediah_xo?s=21&t=vSVbjHCHW_QG5tU6-96n8g"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Twitter"
-            className="hover:text-blue-800 transition"
-          >
-            <FaTwitter />
+            <MailIcon />
           </a>
         </m.div>
       </m.div>
