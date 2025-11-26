@@ -6,15 +6,15 @@ const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata = {
   title: {
-    default: "Osaro | Full Stack Developer Portfolio",
-    template: "%s | Osaro",
+    default: "Jay | Full Stack Developer Portfolio",
+    template: "%s | Jay",
   },
   description:
-    "Explore Osaro's portfolio featuring modern, responsive web apps built with Next.js, Tailwind CSS, and TypeScript.",
+    "Explore Jay's portfolio featuring modern, responsive web apps built with Next.js, Tailwind CSS, and TypeScript.",
   icons: {
-    icon: "/logo.jpg",
-    shortcut: "/logo.jpg",
-    apple: "/logo.jpg",
+    icon: "/yup.svg",
+    shortcut: "/yup.svg",
+    apple: "/yup.svg",
   },
 
   keywords: [
@@ -24,15 +24,15 @@ export const metadata = {
     "Tailwind CSS",
     "TypeScript",
   ],
-  authors: [{ name: "Ogbekhilu Osaro" }],
-  creator: "Ogbekhilu Osaro",
+  authors: [{ name: "Ogbekhilu Jedidiah" }],
+  creator: "Ogbekhilu Jedidiah",
   metadataBase: new URL("https://jay-dev-portfolio.vercel.app/"),
   openGraph: {
-    title: "Osaro | Full Stack Developer Portfolio",
+    title: "Jay | Full Stack Developer Portfolio",
     description:
-      "Explore Osaro's portfolio featuring modern, responsive web apps built with cutting-edge web technologies.",
+      "Explore Jay's portfolio featuring modern, responsive web apps built with cutting-edge web technologies.",
     url: "https://jay-dev-portfolio.vercel.app/",
-    siteName: "Osaro Portfolio",
+    siteName: "Jay Portfolio",
     images: [
       {
         url: "/og-image.png",
@@ -46,7 +46,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Osaro | Full Stack Developer Portfolio",
+    title: "Jay | Full Stack Developer Portfolio",
     description:
       "Modern, responsive web apps built with React, Next.js, and Tailwind CSS.",
     creator: "@Jedediah_xo",

@@ -171,7 +171,7 @@ export default function ContactPage() {
           </a>
 
           <a
-            href="mailto:ogbekhilu.osaro@gmail.com"
+            href="mailto:ogbekhiluosaro@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Email"
