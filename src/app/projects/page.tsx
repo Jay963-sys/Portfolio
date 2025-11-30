@@ -13,8 +13,18 @@ const projects = [
     link: "https://github.com/Jay963-sys/NOC-INCIDENT-TRACKER",
     techStack: ["Node", "ExpressJs", "React", "PostgreSQL"],
   },
+
   {
     id: 2,
+    title: "Toye Studios",
+    description:
+      "Simple portfolio web-app for a creative studio to showcase their work.",
+    imageSrc: "/images/toye.png",
+    link: "https://toyestudios.co.uk/",
+    techStack: ["Next.js(App Router)", "Typescript", "Framer Motion"],
+  },
+  {
+    id: 3,
     title: "Videographer Portfolio Platform",
     description:
       "A full-stack video showcase platform built with performance, flexibility, and style. Designed for filmmakers, content creators, and videographers to easily upload, manage, and present their work online — securely and beautifully.",
@@ -28,15 +38,6 @@ const projects = [
       "Cloudinary",
       "Clerk",
     ],
-  },
-  {
-    id: 3,
-    title: "Toye Studios",
-    description:
-      "Simple portfolio web-app for a creative studio to showcase their work.",
-    imageSrc: "/images/toye.png",
-    link: "https://toye-studios.vercel.app/",
-    techStack: ["Next.js(App Router)", "Typescript", "Framer Motion"],
   },
   {
     id: 4,
