@@ -126,25 +126,35 @@ export default function Navbar() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.4 }}
+              transition={{ duration: 0.25, ease: "easeInOut" }} // faster overlay
               className="fixed inset-0 z-40 bg-[#0a0a0a] flex flex-col justify-center px-6 h-[100dvh]"
             >
               {/* Background Ambience */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full blur-[80px] pointer-events-none" />
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-600/10 rounded-full blur-[80px] pointer-events-none" />
 
-              <nav className="flex flex-col gap-6 relative z-10 max-w-lg mx-auto w-full">
+              {/* Menu Items */}
+              <m.nav
+                className="flex flex-col gap-6 relative z-10 max-w-lg mx-auto w-full"
+                initial="hidden"
+                animate="show"
+                variants={{
+                  hidden: {},
+                  show: { transition: { staggerChildren: 0.05 } }, // faster stagger
+                }}
+              >
                 {navItems.map((item, index) => {
                   const isActive = pathname === item.href;
                   return (
                     <m.div
                       key={item.href}
-                      initial={{ opacity: 0, x: -50 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{
-                        delay: 0.1 + index * 0.1,
-                        duration: 0.5,
-                        ease: "easeOut",
+                      variants={{
+                        hidden: { opacity: 0, x: -50 },
+                        show: {
+                          opacity: 1,
+                          x: 0,
+                          transition: { duration: 0.35, ease: "easeOut" },
+                        },
                       }}
                     >
                       <Link
@@ -152,17 +162,14 @@ export default function Navbar() {
                         onClick={() => setMenuOpen(false)}
                         className="group flex items-baseline gap-6 w-full border-b border-white/5 pb-4"
                       >
-                        {/* Numbering (Mono font for tech feel) */}
                         <span className="text-xs font-bold font-mono text-blue-500">
                           0{index + 1}
                         </span>
-
-                        {/* Label (Huge, Bold, Tracking Tight) */}
                         <span
                           className={`text-5xl font-bold tracking-tighter transition-all duration-300 ${
                             isActive
-                              ? "text-white italic" // Active state
-                              : "text-white/40 group-hover:text-white group-hover:translate-x-2" // Hover state
+                              ? "text-white italic"
+                              : "text-white/40 group-hover:text-white group-hover:translate-x-2"
                           }`}
                         >
                           {item.label}
@@ -172,11 +179,11 @@ export default function Navbar() {
                   );
                 })}
 
-                {/* Footer Links (Staggered in last) */}
+                {/* Footer Links */}
                 <m.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 }}
+                  transition={{ delay: 0.3, duration: 0.35, ease: "easeOut" }}
                   className="mt-8 pt-4 flex flex-col gap-4"
                 >
                   <a
@@ -186,12 +193,12 @@ export default function Navbar() {
                     Get in Touch <ArrowRight size={18} />
                   </a>
                   <p className="text-slate-600 text-sm mt-4">
-                    Based in Andromeda.
+                    Based in Andromeda, Laniakea Supercluster.
                     <br />
                     Available for freelance.
                   </p>
                 </m.div>
-              </nav>
+              </m.nav>
             </m.div>
           )}
         </AnimatePresence>
