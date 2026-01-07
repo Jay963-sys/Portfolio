@@ -12,9 +12,9 @@ export const metadata = {
   description:
     "Explore Jay's portfolio featuring modern, responsive web apps built with Next.js, Tailwind CSS, and TypeScript.",
   icons: {
-    icon: "/yup.svg",
-    shortcut: "/yup.svg",
-    apple: "/yup.svg",
+    icon: "/jay1.svg",
+    shortcut: "/jay1.svg",
+    apple: "/jay1.svg",
   },
 
   keywords: [
