@@ -25,6 +25,21 @@ const projects = [
   },
   {
     id: 3,
+    title: "BrazzPR Agency Platform",
+    description:
+      "A bold, editorial-style corporate website engineered for a leading African PR agency.",
+    imageSrc: "/images/brazz.png",
+    link: "https://brazzprandcomms.com/",
+    techStack: [
+      "Next.js (App Router)",
+      "TypeScript",
+      "Framer Motion",
+      "Sanity.io (Headless CMS)",
+      "Tailwind CSS",
+    ],
+  },
+  {
+    id: 4,
     title: "Videographer Portfolio Platform",
     description:
       "A full-stack video showcase platform built with performance, flexibility, and style. Designed for filmmakers, content creators, and videographers to easily upload, manage, and present their work online — securely and beautifully.",
@@ -40,7 +55,7 @@ const projects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Portfolio Site",
     description:
       "A sleek, responsive portfolio site built with Next.js, Tailwind, and Framer Motion.",
@@ -49,7 +64,7 @@ const projects = [
     techStack: ["Next.js", "Framer Motion", "Vercel"],
   },
   {
-    id: 5,
+    id: 6,
     title: "Weatherify",
     description:
       "A Simple Light-weight Weather web application that relies on simple API calls to fetch weather of different cities.",
@@ -58,7 +73,7 @@ const projects = [
     techStack: ["Python", "HTML + CSS", "Vercel"],
   },
   {
-    id: 6,
+    id: 7,
     title: "🎵Mood Play",
     description:
       "AI-powered Spotify playlist generator that automatically creates playlists based on User prompts or Questionnaire responses",
@@ -73,7 +88,7 @@ const projects = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: "Tranzl8",
     description:
       "A Simple Light-weight Language translation web application that relies on simple API calls to translate between over 100+ languages.",
