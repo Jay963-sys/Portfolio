@@ -3,136 +3,221 @@
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Github, Linkedin } from "lucide-react"; // Ensure you have lucide-react installed
+import {
+  ArrowRight,
+  Github,
+  Linkedin,
+  Code2,
+  Terminal,
+  Cpu,
+} from "lucide-react";
 
 export default function Hero() {
   return (
     <LazyMotion features={domAnimation}>
-      <section className="relative w-full min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 bg-slate-50 dark:bg-slate-950 overflow-hidden selection:bg-blue-500/30">
-        {/* --- BACKGROUND EFFECTS --- */}
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+      <section className="relative w-full min-h-screen pt-20 flex flex-col justify-center items-center overflow-hidden bg-slate-50 dark:bg-[#0a0a0a] selection:bg-blue-500/30">
+        {/* --- 1. AMBIENT BACKGROUND (Fixed to Screen) --- */}
+        <div className="fixed inset-0 z-0 pointer-events-none">
+          {/* Grid Pattern 
+             - Removed the [mask-image] so it covers corner-to-corner 
+             - Added 'fixed' so it stays as a background while you scroll
+          */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
 
-        {/* Central Glow/Spotlight */}
-        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-blue-400 opacity-20 blur-[100px] dark:bg-blue-500/30"></div>
-
-        {/* --- MAIN CONTENT --- */}
-        <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
-          {/* Status Badge */}
+          {/* Moving Orbs */}
           <m.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800 text-blue-600 dark:text-blue-300 text-xs font-medium mb-6"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-            </span>
-            Available for new projects
-          </m.div>
-
-          {/* Headline */}
-          <m.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl sm:text-7xl font-bold tracking-tight text-slate-900 dark:text-white mb-6"
-          >
-            Hi, I&#39;m{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">
-              Jay
-            </span>
-            <br />
-            Software Engineer.
-          </m.h1>
-
-          {/* Description */}
-          <m.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-2xl leading-relaxed"
-          >
-            I architect and build modern, scalable digital solutions with a
-            focus on
-            <span className="text-slate-900 dark:text-slate-200 font-medium">
-              {" "}
-              user experience
-            </span>{" "}
-            and
-            <span className="text-slate-900 dark:text-slate-200 font-medium">
-              {" "}
-              performance
-            </span>
-            .
-          </m.p>
-
-          {/* Buttons */}
+            animate={{
+              scale: [1, 1.1, 1],
+              opacity: [0.3, 0.5, 0.3],
+            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-[128px]"
+          />
           <m.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center gap-4 mb-16"
-          >
-            <Link
-              href="/projects"
-              className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-blue-600 px-8 font-medium text-white transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/30"
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.3, 0.6, 0.3],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+            className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[128px]"
+          />
+        </div>
+
+        {/* --- 2. MAIN CONTENT --- */}
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center gap-12 md:gap-8">
+          {/* LEFT: TEXT CONTENT */}
+          <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
+            {/* Headline */}
+            <m.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-slate-900 dark:text-white mb-6"
             >
-              <span className="mr-2">View Projects</span>
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Link>
+              Building <br className="hidden md:block" />
+              <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400">
+                Digital Experiences
+                {/* Underline Squiggle */}
+                <svg
+                  className="absolute w-full h-3 -bottom-1 left-0 text-blue-500 opacity-50"
+                  viewBox="0 0 100 10"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="M0 5 Q 50 10 100 5"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    fill="none"
+                  />
+                </svg>
+              </span>
+            </m.h1>
 
-            <div className="flex items-center gap-4">
-              {/* Social Icons - Replace hrefs with your actual links */}
-              <Link
-                href="https://github.com"
-                target="_blank"
-                className="p-3 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-black dark:hover:text-white transition-colors hover:scale-110 duration-200"
-              >
-                <Github className="w-5 h-5" />
-              </Link>
-              <Link
-                href="https://linkedin.com"
-                target="_blank"
-                className="p-3 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:scale-110 duration-200"
-              >
-                <Linkedin className="w-5 h-5" />
-              </Link>
-            </div>
-          </m.div>
+            <m.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-lg leading-relaxed"
+            >
+              Hi, I&#39;m{" "}
+              <span className="font-bold text-slate-900 dark:text-white">
+                Jay
+              </span>
+              . I engineer scalable software with a focus on buttery smooth
+              interactions and pixel-perfect design.
+            </m.p>
 
-          {/* Illustration/Image with Floating Animation */}
-          <m.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative w-full max-w-[400px] aspect-square"
-          >
-            {/* Decorative blob behind image */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-cyan-400 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-
+            {/* Actions */}
             <m.div
-              animate={{ y: [0, -15, 0] }}
-              transition={{
-                repeat: Infinity,
-                duration: 6,
-                ease: "easeInOut",
-              }}
-              className="relative z-10"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
             >
-              <Image
-                src="/illustration.svg"
-                alt="Developer Illustration"
-                width={400}
-                height={400}
-                className="w-full h-auto drop-shadow-2xl"
-                priority
-              />
+              {/* Shimmer Button */}
+              <Link
+                href="/projects"
+                className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 w-full sm:w-auto justify-center"
+              >
+                <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-8 py-1 text-sm font-medium text-white backdrop-blur-3xl transition-colors hover:bg-slate-900">
+                  View Projects <ArrowRight className="ml-2 w-4 h-4" />
+                </span>
+              </Link>
+
+              {/* Socials */}
+              <div className="flex items-center gap-4">
+                <Link
+                  href="https://github.com"
+                  className="p-3 rounded-full bg-white dark:bg-white/10 border border-slate-200 dark:border-white/10 hover:scale-110 transition-transform text-slate-700 dark:text-white"
+                >
+                  <Github className="w-5 h-5" />
+                </Link>
+                <Link
+                  href="https://linkedin.com"
+                  className="p-3 rounded-full bg-white dark:bg-white/10 border border-slate-200 dark:border-white/10 hover:scale-110 transition-transform text-slate-700 dark:text-white"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </Link>
+              </div>
             </m.div>
-          </m.div>
+          </div>
+
+          {/* RIGHT: ILLUSTRATION & FLOATING ELEMENTS */}
+          <div className="flex-1 w-full relative flex justify-center md:justify-end mt-12 md:mt-0">
+            <m.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px]"
+            >
+              {/* Floating Orbit Icons */}
+              <FloatingIcon
+                icon={<Code2 size={24} />}
+                delay={0}
+                x={-120}
+                y={-80}
+              />
+              <FloatingIcon
+                icon={<Terminal size={24} />}
+                delay={2}
+                x={140}
+                y={-40}
+              />
+              <FloatingIcon
+                icon={<Cpu size={24} />}
+                delay={4}
+                x={100}
+                y={120}
+              />
+
+              {/* Glass Card Background for Illustration */}
+              <div className="absolute inset-4 bg-gradient-to-tr from-white/20 to-transparent dark:from-white/5 dark:to-transparent backdrop-blur-md rounded-[2rem] border border-white/20 shadow-2xl rotate-3" />
+
+              {/* Illustration */}
+              <m.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 6,
+                  ease: "easeInOut",
+                }}
+                className="relative z-10 w-full h-full p-8"
+              >
+                <Image
+                  src="/illustration.svg"
+                  alt="Jay - Software Engineer"
+                  width={500}
+                  height={500}
+                  className="w-full h-full object-contain drop-shadow-2xl"
+                  priority
+                />
+              </m.div>
+            </m.div>
+          </div>
         </div>
       </section>
     </LazyMotion>
+  );
+}
+
+// Helper Component for Floating Icons
+function FloatingIcon({
+  icon,
+  delay,
+  x,
+  y,
+}: {
+  icon: React.ReactNode;
+  delay: number;
+  x: number;
+  y: number;
+}) {
+  return (
+    <m.div
+      initial={{ opacity: 0, x: 0, y: 0 }}
+      animate={{
+        opacity: 1,
+        x: [x, x + 10, x],
+        y: [y, y - 10, y],
+      }}
+      transition={{
+        opacity: { delay: 0.5 + delay, duration: 0.5 },
+        default: {
+          repeat: Infinity,
+          duration: 4,
+          ease: "easeInOut",
+          delay: delay,
+        }, // Floating effect
+      }}
+      className="absolute top-1/2 left-1/2 z-20 p-4 rounded-2xl bg-white dark:bg-slate-800 shadow-xl border border-slate-100 dark:border-slate-700 text-blue-600 dark:text-blue-400"
+    >
+      {icon}
+    </m.div>
   );
 }
