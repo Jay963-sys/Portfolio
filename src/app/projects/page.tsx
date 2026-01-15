@@ -29,7 +29,7 @@ const projects = [
     description:
       "Simple portfolio web-app for a creative studio to showcase their work.",
     imageSrc: "/images/toye.png",
-    link: "https://toyestudios.co.uk/",
+    link: "https://www.toyestudios.co.uk/",
     techStack: ["Next.js", "Typescript", "Framer Motion"],
   },
   {
@@ -38,20 +38,29 @@ const projects = [
     description:
       "A bold, editorial-style corporate website engineered for a leading African PR agency.",
     imageSrc: "/images/brazz.png",
-    link: "https://brazzprandcomms.com/",
+    link: "https://www.brazzprandcomms.com/",
     techStack: ["Next.js", "Sanity CMS", "Tailwind CSS"],
   },
   {
     id: 4,
+    title: "RCCG Victory House Chicago",
+    description:
+      "A high-performance Next.js application featuring real-time sermon streaming, a custom RAG-based AI chatbot, and dynamic content management via Sanity.",
+    imageSrc: "/images/vch.png",
+    link: "https://www.victoryalltheway.org/",
+    techStack: ["Next.js", "Sanity CMS", "Tailwind CSS", "Vercel AI SDK"],
+  },
+  {
+    id: 5,
     title: "Videographer Portfolio",
     description:
       "A full-stack video showcase platform built with performance, flexibility, and style.",
     imageSrc: "/images/bhoye.png",
-    link: "https://bhoyevisuals.com/",
+    link: "https://www.bhoyevisuals.com/",
     techStack: ["Next.js", "PostgreSQL", "Cloudinary", "Clerk"],
   },
   {
-    id: 5,
+    id: 6,
     title: "Portfolio Site",
     description:
       "A sleek, responsive portfolio site built with Next.js, Tailwind, and Framer Motion.",
@@ -60,7 +69,7 @@ const projects = [
     techStack: ["Next.js", "Framer Motion", "Vercel"],
   },
   {
-    id: 6,
+    id: 7,
     title: "Weatherify",
     description:
       "A Simple Light-weight Weather web application that relies on simple API calls.",
@@ -69,7 +78,7 @@ const projects = [
     techStack: ["Python", "HTML + CSS", "Vercel"],
   },
   {
-    id: 7,
+    id: 8,
     title: "🎵 Mood Play",
     description:
       "AI-powered Spotify playlist generator based on User prompts or Questionnaire responses.",
@@ -78,7 +87,7 @@ const projects = [
     techStack: ["Next.js", "NextAuth", "Spotify API"],
   },
   {
-    id: 8,
+    id: 9,
     title: "Tranzl8",
     description:
       "A Simple Light-weight Language translation web application supporting 100+ languages.",

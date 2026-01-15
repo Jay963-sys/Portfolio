@@ -94,7 +94,7 @@ export default function ContactPage() {
                   value="@Jay963-sys"
                 />
                 <SocialCard
-                  href="https://twitter.com" // Update your link
+                  href="https://x.com/Jedediah_xo"
                   icon={<FaTwitter size={20} />}
                   label="Twitter"
                   value="@Jay_Dev"

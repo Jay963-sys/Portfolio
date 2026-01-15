@@ -113,13 +113,13 @@ export default function Hero() {
               {/* Socials */}
               <div className="flex items-center gap-4">
                 <Link
-                  href="https://github.com"
+                  href="https://github.com/Jay963-sys"
                   className="p-3 rounded-full bg-white dark:bg-white/10 border border-slate-200 dark:border-white/10 hover:scale-110 transition-transform text-slate-700 dark:text-white"
                 >
                   <Github className="w-5 h-5" />
                 </Link>
                 <Link
-                  href="https://linkedin.com"
+                  href="https://linkedin.com/in/ogbekhilu-osaro"
                   className="p-3 rounded-full bg-white dark:bg-white/10 border border-slate-200 dark:border-white/10 hover:scale-110 transition-transform text-slate-700 dark:text-white"
                 >
                   <Linkedin className="w-5 h-5" />
