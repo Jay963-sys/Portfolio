@@ -61,6 +61,15 @@ const projects = [
   },
   {
     id: 6,
+    title: "SubTrack",
+    description:
+      "A comprehensive subscription analytics dashboard allowing users to track recurring expenses, visualize spending by category, and receive renewal alerts via a secure, mobile-responsive interface.",
+    imageSrc: "/images/subtrackk.png",
+    link: "https://subtrackk.vercel.app",
+    techStack: ["Next.js", "Tailwind CSS", "Prisma", "Clerk", "Recharts"],
+  },
+  {
+    id: 7,
     title: "Portfolio Site",
     description:
       "A sleek, responsive portfolio site built with Next.js, Tailwind, and Framer Motion.",
@@ -69,7 +78,7 @@ const projects = [
     techStack: ["Next.js", "Framer Motion", "Vercel"],
   },
   {
-    id: 7,
+    id: 8,
     title: "Weatherify",
     description:
       "A Simple Light-weight Weather web application that relies on simple API calls.",
@@ -78,7 +87,7 @@ const projects = [
     techStack: ["Python", "HTML + CSS", "Vercel"],
   },
   {
-    id: 8,
+    id: 9,
     title: "🎵 Mood Play",
     description:
       "AI-powered Spotify playlist generator based on User prompts or Questionnaire responses.",
@@ -87,7 +96,7 @@ const projects = [
     techStack: ["Next.js", "NextAuth", "Spotify API"],
   },
   {
-    id: 9,
+    id: 10,
     title: "Tranzl8",
     description:
       "A Simple Light-weight Language translation web application supporting 100+ languages.",
