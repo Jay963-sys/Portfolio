@@ -55,7 +55,7 @@ const projects = [
     title: "Videographer Portfolio",
     description:
       "A full-stack video showcase platform built with performance, flexibility, and style.",
-    imageSrc: "/images/bhoye.png",
+    imageSrc: "/images/kweku.png",
     link: "https://www.bhoyevisuals.com/",
     techStack: ["Next.js", "PostgreSQL", "Cloudinary", "Clerk"],
   },
