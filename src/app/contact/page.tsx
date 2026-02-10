@@ -11,30 +11,28 @@ export default function ContactPage() {
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  // --- EMAIL JS LOGIC ---
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
     emailjs
       .sendForm(
-        "service_d8antsk", // Keep your ID
-        "template_4lhtklp", // Keep your ID
+        "service_d8antsk",
+        "template_4lhtklp",
         formRef.current!,
-        "FIhcQW6JdpwRhdToI" // Keep your ID
+        "FIhcQW6JdpwRhdToI",
       )
       .then(
         () => {
           setSuccess(true);
           setLoading(false);
           formRef.current?.reset();
-          // Reset success state after 5 seconds if you want
-          // setTimeout(() => setSuccess(false), 5000);
+          setTimeout(() => setSuccess(false), 5000);
         },
         (error) => {
           console.error("EmailJS Error:", error);
           setLoading(false);
-        }
+        },
       );
   };
 
@@ -82,10 +80,10 @@ export default function ContactPage() {
               {/* Social Cards */}
               <div className="grid gap-4">
                 <SocialCard
-                  href="mailto:ogbekhiluosaro@gmail.com"
+                  href="mailto:ogbekhilujedidiah@gmail.com"
                   icon={<Mail size={20} />}
                   label="Email Me"
-                  value="ogbekhiluosaro@gmail.com"
+                  value="ogbekhilujedidiah@gmail.com"
                 />
                 <SocialCard
                   href="https://github.com/Jay963-sys"

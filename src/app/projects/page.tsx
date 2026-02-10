@@ -28,7 +28,7 @@ const projects = [
     title: "Toye Studios",
     description:
       "Simple portfolio web-app for a creative studio to showcase their work.",
-    imageSrc: "/images/toye.png",
+    imageSrc: "/images/toye1.png",
     link: "https://www.toyestudios.co.uk/",
     techStack: ["Next.js", "Typescript", "Framer Motion"],
   },
